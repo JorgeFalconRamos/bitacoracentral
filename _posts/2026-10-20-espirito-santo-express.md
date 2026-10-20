@@ -21,17 +21,17 @@ La embarcación se encontraba cumpliendo el **servicio regular AS2** de Hapag-Ll
 Tras desatarse el foco ígneo, buques mercantes que navegaban en las inmediaciones alteraron su derrota para acudir a la llamada de socorro. Las operaciones coordinadas con los centros de rescate marítimo regionales permitieron evacuar con éxito a los 25 marinos que componían la dotación.
 
 Ante la pérdida de propulsión y gobierno de la unidad, la autoridad de control de tráfico marítimo del área (**NAVAREA V**) emitió alertas de seguridad náutica para todo el tráfico en tránsito. Se instó a los navegantes a mantener un amplio radio de resguardo preventivo ante dos peligros inminentes:
-1. El riesgo persistente de **explosiones secundarias** en las bahías de carga.
-2. El peligro hidrodinámico por **caída de contenedores al agua**, que genera obstáculos a la navegación no visibles en radar a nivel de superficie.
+ 1. El riesgo persistente de **explosiones secundarias** en las bahías de carga.
+ 2. El peligro hidrodinámico por **caída de contenedores al agua**, que genera obstáculos a la navegación no visibles en radar a nivel de superficie.
 
 ## Incógnitas sobre la carga y movilización de salvamento
 
-Hasta el momento, ni Hapag-Lloyd ni Seaspan han determinado el origen térmico de la explosión ni el sector específico donde se inició el fuego[cite: 3, 6]. Tampoco se ha precisado el inventario de contenedores dañados ni si el manifiesto de carga incluía mercancías peligrosas (código IMDG) en las celdas directamente afectadas.
+Hasta el momento, ni Hapag-Lloyd ni Seaspan han determinado el origen térmico de la explosión ni el sector específico donde se inició el fuego. Tampoco se ha precisado el inventario de contenedores dañados ni si el manifiesto de carga incluía mercancías peligrosas (código IMDG) en las celdas directamente afectadas.
 
-Equipos internacionales especializados en salvamento náutico y extinción de incendios a gran escala han sido movilizados hacia la zona[cite: 3]. La prioridad operativa se concentra en sofocar el fuego a bordo para estabilizar la temperatura y evaluar si las condiciones de estabilidad transversal permiten iniciar maniobras de remolque hacia la costa sudamericana.
+Equipos internacionales especializados en salvamento náutico y extinción de incendios a gran escala han sido movilizados hacia la zona. La prioridad operativa se concentra en sofocar el fuego a bordo para estabilizar la temperatura y evaluar si las condiciones de estabilidad transversal permiten iniciar maniobras de remolque hacia la costa sudamericana.
 
 ## Impacto logístico en el Cono Sur y eventual Avería Gruesa
 
 La cancelación operativa de la escala en Santos generará disrupciones y severos retrasos en la cadena de suministros regional. La rotación del buque incluía descargas y transbordos de contenedores destinados no solo a Santos, sino también a las terminales de **Paranaguá, Navegantes, Rio Grande, Montevideo y Buenos Aires**.
 
-Asimismo, fuentes del sector asegurador marítimo anticipan que, dado el volumen de gastos extraordinarios necesarios para extinguir el siniestro y preservar la carga restante, el incidente podría derivar en una declaración formal de **Avería Gruesa** (*General Average*), mecanismo regulatorio donde armadores y propietarios de la carga comparten proporcionalmente los costos del salvamento[cite: 6].
+Asimismo, fuentes del sector asegurador marítimo anticipan que, dado el volumen de gastos extraordinarios necesarios para extinguir el siniestro y preservar la carga restante, el incidente podría derivar en una declaración formal de **Avería Gruesa** (*General Average*), mecanismo regulatorio donde armadores y propietarios de la carga comparten proporcionalmente los costos del salvamento.
