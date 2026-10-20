@@ -1,0 +1,10 @@
+title: "Bitácora Central"
+description: "La actualidad del río, el mar y los puertos"
+url: "https://bitacoracentral.com.ar"
+permalink: /noticias/:title/
+
+# Formato de fecha y lectura
+timezone: America/Argentina/Buenos_Aires
+markdown: kramdown
+kramdown:
+  input: GFM
