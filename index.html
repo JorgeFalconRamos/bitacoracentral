@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bitácora Central | La actualidad del río, el mar y los puertos</title>
-  <meta name="description" content="Información, análisis operativo, maniobras y normativa marítima, portuaria y fluvial de Argentina.">
+  <meta name="description" content="Portal independiente de actualidad, análisis técnico, maniobra, puertos y normativa naval y fluvial de Argentina.">
   
   <!-- Tipografías de corte editorial -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,11 +21,13 @@
       --sidebar-card: #091728;
       --accent-gold: #c6a664;
       --accent-cyan: #38bdf8;
+      --accent-seguridad: #ef4444;
       --accent-prefectura: #0ea5e9;
-      --accent-industria: #3b82f6;
+      --accent-offshore: #f59e0b;
+      --accent-logistica: #3b82f6;
+      --accent-innovacion: #10b981;
       --accent-puertos: #06b6d4;
-      --accent-ambiente: #10b981;
-      --accent-capacitacion: #8b5cf6;
+      --accent-infra: #8b5cf6;
       --text-white: #ffffff;
       --text-main: #e2e8f0;
       --text-muted: #94a3b8;
@@ -60,9 +62,7 @@
       display: block;
     }
 
-    /* =========================================
-       1. CABECERA SUPERIOR (TOPBAR)
-       ========================================= */
+    /* 1. TOPBAR */
     header {
       background-color: var(--bg-header);
       border-bottom: 1px solid var(--border);
@@ -146,9 +146,7 @@
       fill: currentColor;
     }
 
-    /* =========================================
-       2. BARRA DE NAVEGACIÓN
-       ========================================= */
+    /* 2. NAVEGACIÓN */
     nav.nav-bar {
       background-color: var(--nav-bg);
       border-bottom: 1px solid var(--border);
@@ -198,9 +196,7 @@
       border-bottom-color: var(--accent-cyan);
     }
 
-    /* =========================================
-       3. CONTENEDOR PRINCIPAL (LAYOUT 2 COLUMNAS)
-       ========================================= */
+    /* 3. LAYOUT PRINCIPAL */
     .site-wrapper {
       max-width: 1240px;
       margin: 2rem auto;
@@ -210,9 +206,7 @@
       gap: 2rem;
     }
 
-    /* =========================================
-       4. HERO / NOTICIA PRINCIPAL
-       ========================================= */
+    /* 4. HERO SLIDER */
     .hero-slider {
       position: relative;
       border-radius: 8px;
@@ -225,7 +219,7 @@
 
     .hero-slide {
       position: relative;
-      min-height: 440px;
+      min-height: 460px;
       display: flex;
       align-items: flex-end;
     }
@@ -236,7 +230,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: brightness(0.65);
+      filter: brightness(0.6);
       transition: transform 0.5s ease;
     }
 
@@ -247,19 +241,19 @@
     .hero-gradient {
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(6,16,30,0.1) 0%, rgba(6,16,30,0.92) 85%);
+      background: linear-gradient(180deg, rgba(6,16,30,0.15) 0%, rgba(6,16,30,0.95) 85%);
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
-      padding: 2.5rem 2.5rem 2rem 2.5rem;
-      max-width: 780px;
+      padding: 2.5rem;
+      max-width: 820px;
     }
 
     .badge {
       display: inline-block;
-      padding: 0.25rem 0.65rem;
+      padding: 0.3rem 0.7rem;
       font-size: 0.68rem;
       font-weight: 700;
       text-transform: uppercase;
@@ -268,16 +262,16 @@
       margin-bottom: 0.8rem;
     }
 
-    .badge-maritima { background-color: #0284c7; color: #fff; }
+    .badge-seguridad { background-color: var(--accent-seguridad); color: #fff; }
     .badge-prefectura { background-color: var(--accent-prefectura); color: #fff; }
-    .badge-industria { background-color: var(--accent-industria); color: #fff; }
+    .badge-offshore { background-color: var(--accent-offshore); color: #020912; font-weight: 800; }
+    .badge-logistica { background-color: var(--accent-logistica); color: #fff; }
+    .badge-innovacion { background-color: var(--accent-innovacion); color: #022013; font-weight: 800; }
     .badge-puertos { background-color: var(--accent-puertos); color: #04243a; font-weight: 800; }
-    .badge-navegacion { background-color: #2563eb; color: #fff; }
-    .badge-capacitacion { background-color: var(--accent-capacitacion); color: #fff; }
-    .badge-ambiente { background-color: var(--accent-ambiente); color: #022c1d; font-weight: 800; }
+    .badge-infra { background-color: var(--accent-infra); color: #fff; }
 
     .hero-content h2 {
-      font-size: 1.9rem;
+      font-size: 1.85rem;
       font-weight: 700;
       color: var(--text-white);
       line-height: 1.25;
@@ -286,7 +280,7 @@
 
     .hero-content p {
       color: #cbd5e1;
-      font-size: 0.98rem;
+      font-size: 0.96rem;
       line-height: 1.5;
       margin-bottom: 1.2rem;
     }
@@ -307,7 +301,7 @@
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.2);
       color: var(--text-white);
-      padding: 0.5rem 1.2rem;
+      padding: 0.55rem 1.3rem;
       border-radius: 4px;
       font-size: 0.78rem;
       font-weight: 700;
@@ -322,57 +316,7 @@
       border-color: var(--accent-gold);
     }
 
-    .slider-controls {
-      position: absolute;
-      bottom: 1.5rem;
-      right: 2rem;
-      z-index: 5;
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-
-    .dots {
-      display: flex;
-      gap: 6px;
-    }
-
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.3);
-      cursor: pointer;
-    }
-
-    .dot.active {
-      background: var(--text-white);
-      width: 18px;
-      border-radius: 4px;
-    }
-
-    .slider-arrows {
-      display: flex;
-      gap: 4px;
-    }
-
-    .arrow-btn {
-      background: rgba(0, 0, 0, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: #fff;
-      width: 26px;
-      height: 26px;
-      border-radius: 4px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-    }
-
-    /* =========================================
-       5. GRILLA DE NOTICIAS (6 TARJETAS)
-       ========================================= */
+    /* 5. GRILLA DE NOTICIAS */
     .section-header {
       display: flex;
       justify-content: space-between;
@@ -397,12 +341,6 @@
       width: 45px;
       height: 2px;
       background-color: var(--accent-cyan);
-    }
-
-    .section-header a {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--accent-cyan);
     }
 
     .news-grid {
@@ -454,7 +392,7 @@
     }
 
     .card-body h4 {
-      font-size: 0.98rem;
+      font-size: 0.95rem;
       font-weight: 700;
       color: var(--text-white);
       line-height: 1.35;
@@ -479,9 +417,7 @@
       padding-top: 0.6rem;
     }
 
-    /* =========================================
-       6. COLUMNA LATERAL (SIDEBAR)
-       ========================================= */
+    /* 6. SIDEBAR */
     .sidebar {
       display: flex;
       flex-direction: column;
@@ -507,7 +443,6 @@
       padding-left: 0.6rem;
     }
 
-    /* Widget YouTube */
     .yt-thumb-box {
       position: relative;
       border-radius: 4px;
@@ -591,48 +526,6 @@
       background-color: #0369a1;
     }
 
-    /* Widget Puertos */
-    .port-header-img {
-      border-radius: 4px;
-      height: 90px;
-      width: 100%;
-      object-fit: cover;
-      margin-bottom: 0.8rem;
-    }
-
-    .port-list {
-      list-style: none;
-    }
-
-    .port-list li {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .port-list li:last-child {
-      border-bottom: none;
-    }
-
-    .port-list a {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.6rem 0.2rem;
-      font-size: 0.82rem;
-      color: var(--text-main);
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .port-list a:hover {
-      color: var(--accent-cyan);
-    }
-
-    .port-list span.arrow {
-      color: var(--text-muted);
-      font-size: 0.75rem;
-    }
-
-    /* Widget Normativa */
     .norma-box {
       display: flex;
       gap: 0.8rem;
@@ -640,13 +533,20 @@
       border: 1px solid var(--border);
       border-radius: 4px;
       padding: 0.8rem;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.8rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .norma-box:hover {
+      background: rgba(255, 255, 255, 0.05);
     }
 
     .norma-icon svg {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
       fill: var(--accent-cyan);
+      flex-shrink: 0;
     }
 
     .norma-info h5 {
@@ -656,20 +556,12 @@
       margin-bottom: 0.3rem;
     }
 
-    .norma-info span {
-      font-size: 0.7rem;
+    .norma-info p {
+      font-size: 0.72rem;
       color: var(--text-muted);
+      line-height: 1.35;
     }
 
-    .norma-link {
-      font-size: 0.75rem;
-      color: var(--accent-cyan);
-      font-weight: 600;
-      display: inline-block;
-      margin-top: 0.4rem;
-    }
-
-    /* Widget Redes Sociales (Lista Completa) */
     .social-list {
       display: flex;
       flex-direction: column;
@@ -725,9 +617,7 @@
       color: var(--text-muted);
     }
 
-    /* =========================================
-       7. PIE DE PÁGINA (FOOTER)
-       ========================================= */
+    /* 7. FOOTER & ADVERTENCIA */
     footer {
       background-color: #040a13;
       border-top: 1px solid var(--border);
@@ -739,7 +629,7 @@
       max-width: 1240px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.2fr 0.8fr;
       gap: 3rem;
       padding-bottom: 2.5rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -759,11 +649,38 @@
       margin-bottom: 0.4rem;
     }
 
-    .footer-brand-text p {
-      font-size: 0.85rem;
+    .disclaimer-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(198, 166, 100, 0.25);
+      border-radius: 6px;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    .disclaimer-title {
+      color: var(--accent-gold);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .disclaimer-card p {
+      font-size: 0.76rem;
       color: var(--text-muted);
-      line-height: 1.5;
-      max-width: 380px;
+      line-height: 1.45;
+    }
+
+    .disclaimer-motto {
+      display: block;
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: var(--accent-gold);
+      font-size: 0.74rem;
     }
 
     .newsletter-box h5 {
@@ -817,16 +734,7 @@
       gap: 1rem;
     }
 
-    .footer-links {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .footer-links a:hover {
-      color: var(--text-main);
-    }
-
-    /* Modal emergente para lectura completa */
+    /* MODAL DE LECTURA */
     .modal {
       display: none;
       position: fixed;
@@ -847,28 +755,39 @@
       background-color: var(--bg-header);
       border: 1px solid var(--border);
       border-radius: 8px;
-      max-width: 650px;
+      max-width: 680px;
       width: 100%;
       max-height: 85vh;
       overflow-y: auto;
-      padding: 2rem;
+      padding: 2.2rem;
       position: relative;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.8);
     }
 
     .modal-close {
       position: absolute;
-      top: 1rem;
-      right: 1rem;
+      top: 1.2rem;
+      right: 1.2rem;
       background: none;
       border: none;
       color: var(--text-muted);
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       cursor: pointer;
+      line-height: 1;
     }
 
-    /* =========================================
-       8. ADAPTACIÓN PARA MÓVILES (RESPONSIVE)
-       ========================================= */
+    .modal-close:hover {
+      color: #fff;
+    }
+
+    .modal-category {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      margin-bottom: 0.5rem;
+    }
+
     @media (min-width: 769px) {
       .slogan-center {
         display: block;
@@ -912,24 +831,17 @@
 </head>
 <body>
 
-  <!-- =========================================
-       CABECERA INSTITUCIONAL
-       ========================================= -->
+  <!-- CABECERA PRINCIPAL -->
   <header>
     <div class="top-bar">
-      <!-- Logo y Nombre de Bitácora Central -->
       <div class="logo-container">
-        <!-- Isotipo SVG Vectorial Náutico -->
         <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="50" cy="50" r="48" fill="#0c1e33" stroke="#c6a664" stroke-width="2"/>
-          <!-- Olas estilizadas -->
           <path d="M18 64C30 58 40 72 58 64C72 58 82 66 84 68" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
           <path d="M16 72C28 66 38 78 56 70C70 64 80 72 84 75" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
-          <!-- Silueta Buque -->
           <path d="M30 56L36 38H64L70 56L50 62L30 56Z" fill="#ffffff"/>
           <path d="M42 38V30H58V38" stroke="#ffffff" stroke-width="2" fill="none"/>
           <rect x="47" y="24" width="6" height="6" fill="#c6a664"/>
-          <!-- Proa afilada -->
           <path d="M50 26L50 62" stroke="#0c1e33" stroke-width="2"/>
         </svg>
         <div class="brand-text">
@@ -938,31 +850,24 @@
         </div>
       </div>
 
-      <!-- Eslogan en el centro -->
       <div class="slogan-center">
         La actualidad del río, el mar y los puertos
       </div>
 
-      <!-- Redes y Búsqueda -->
       <div class="header-actions">
         <div class="social-icons-top">
-          <!-- YouTube -->
           <a href="https://youtube.com/@bitacoracentral" target="_blank" title="YouTube">
             <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
           </a>
-          <!-- Instagram -->
           <a href="https://instagram.com/bitacoracentral" target="_blank" title="Instagram">
             <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
-          <!-- X (Twitter) -->
           <a href="https://x.com/Bitacora_Naval" target="_blank" title="X / Twitter">
             <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
-          <!-- Facebook -->
           <a href="https://facebook.com" target="_blank" title="Facebook">
             <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           </a>
-          <!-- LinkedIn -->
           <a href="https://linkedin.com" target="_blank" title="LinkedIn">
             <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
           </a>
@@ -971,163 +876,145 @@
     </div>
   </header>
 
-  <!-- =========================================
-       BARRA DE NAVEGACIÓN
-       ========================================= -->
+  <!-- BARRA DE NAVEGACIÓN -->
   <nav class="nav-bar">
     <div class="nav-inner">
       <ul class="nav-links">
         <li><a href="#inicio" class="active">Inicio</a></li>
         <li><a href="#noticias">Noticias</a></li>
+        <li><a href="#seguridad">Seguridad Marítima</a></li>
+        <li><a href="#offshore">Energía y Offshore</a></li>
+        <li><a href="#logistica">Logística Fluvial</a></li>
         <li><a href="#puertos">Puertos</a></li>
-        <li><a href="#navegacion">Navegación</a></li>
-        <li><a href="#defensa">Defensa y Seguridad</a></li>
-        <li><a href="#hidrovia">Hidrovía</a></li>
+        <li><a href="#tecnologia">Tecnología</a></li>
         <li><a href="#normativa">Normativa</a></li>
-        <li><a href="#opinion">Opinión</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- =========================================
-       CUERPO PRINCIPAL
-       ========================================= -->
+  <!-- CONTENIDO PRINCIPAL -->
   <div class="site-wrapper" id="inicio">
 
-    <!-- COLUMNA IZQUIERDA: NOTICIAS -->
     <main>
 
-      <!-- NOTICIA DESTACADA (HERO SLIDER) -->
+      <!-- NOTICIA DESTACADA: ESPIRITO SANTO EXPRESS -->
       <section class="hero-slider">
         <div class="hero-slide">
-          <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80" alt="Portacontenedores navegando canal fluvial" class="hero-img">
+          <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80" alt="Portacontenedores en alta mar" class="hero-img">
           <div class="hero-gradient"></div>
           <div class="hero-content">
-            <span class="badge badge-maritima">Actualidad Marítima</span>
-            <h2>Nuevos desafíos hidrodinámicos en los canales de la Vía Navegable Troncal</h2>
-            <p>Análisis técnico sobre la navegación de convoyes en canales de navegación restringidos, el efecto banco y su impacto en las determinaciones de seguridad operativa.</p>
+            <span class="badge badge-seguridad">Siniestro Marítimo</span>
+            <h2>Incendio y abandono del portacontenedores «Espirito Santo Express» en el Atlántico Sur</h2>
+            <p>El buque operado por Hapag-Lloyd sufrió una explosión e incendio en su zona de carga mientras navegaba hacia Santos. Los 25 tripulantes fueron rescatados con vida y la nave quedó a la deriva a la espera de tareas de salvamento.</p>
             <div class="news-meta">
-              <span>📅 20 Oct 2026</span>
-              <span>⏱️ 5 min de lectura</span>
+              <span>📅 Octubre 2026</span>
+              <span>⏱️ 4 min de lectura</span>
               <span>⚓ Redacción Bitácora Central</span>
             </div>
-            <button class="btn-read-more" onclick="abrirArticulo('Nuevos desafíos hidrodinámicos en los canales de la Vía Navegable Troncal', 'La navegación en canales de sección reducida impone fenómenos hidrodinámicos que demandan máxima pericia náutica. A medida que aumenta el tonelaje y las dimensiones de los convoyes de empuje que bajan por el río Paraná, factores como el squat (asentamiento por velocidad) y el efecto banco (atracción de popa hacia las orillas) exigen una rigurosa planificación de las velocidades de paso y determinaciones batimétricas constantes. En este informe repasamos los protocolos de gobierno y las recomendaciones para evitar situaciones de aproximación crítica en pasos estrechos.')">LEER MÁS →</button>
-          </div>
-        </div>
-
-        <div class="slider-controls">
-          <div class="dots">
-            <div class="dot active"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-          </div>
-          <div class="slider-arrows">
-            <button class="arrow-btn">‹</button>
-            <button class="arrow-btn">›</button>
+            <button class="btn-read-more" onclick="abrirArticulo('Seguridad Marítima', 'Incendio y abandono del portacontenedores Espirito Santo Express en el Atlántico Sur', 'El buque portacontenedores Espirito Santo Express, operado por la naviera Hapag-Lloyd, sufrió una explosión seguida de un importante incendio en su zona de carga mientras navegaba en aguas del Atlántico Sur con destino al puerto de Santos, Brasil.\n\nAnte la magnitud del fuego, el capitán ordenó la evacuación de la embarcación. Los 25 miembros de la tripulación fueron rescatados sanos y salvos por buques mercantes que respondieron de inmediato al llamado de socorro emitido en la zona.\n\nLa embarcación permanece a la deriva mientras se evalúan las condiciones operativas y se coordina el plan de salvamento náutico para contener los riesgos derivados de la carga y el estado de la nave.')">LEER INFORME COMPLETO →</button>
           </div>
         </div>
       </section>
 
-      <!-- GRILLA DE ÚLTIMAS NOTICIAS -->
+      <!-- GRILLA DE NOTICIAS -->
       <div class="section-header" id="noticias">
-        <h3>Últimas noticias</h3>
-        <a href="#noticias">Ver todas →</a>
+        <h3>Despachos del sector</h3>
+        <span style="font-size:0.8rem; color:var(--text-muted);">Actualidad verificada</span>
       </div>
 
       <div class="news-grid">
 
-        <!-- Noticia 1: Prefectura -->
-        <article class="news-card" onclick="abrirArticulo('Prefectura detecta presunta pesca ilegal en la milla 201', 'Guardacostas de la Autoridad Marítima realizaron un operativo de control y monitoreo en el límite exterior de la Zona Económica Exclusiva Argentina (milla 201). El procedimiento coordinó medios aéreos y de superficie para verificar que la flota potera extranjera opere estrictamente fuera del mar patrimonial argentino, en cumplimiento de los convenios internacionales vigentes.')">
+        <!-- Noticia 1: Prefectura e INVAP -->
+        <article class="news-card" onclick="abrirArticulo('Tecnología y Vigilancia', 'Prefectura visitó INVAP para conocer los avances del satélite SABIA-Mar', 'Una delegación de la Prefectura Naval Argentina visitó la sede central de la empresa tecnológica INVAP en San Carlos de Bariloche.\n\nEl propósito del encuentro fue interiorizarse sobre el estado de avance, desarrollo y ensayos finales del satélite argentino SABIA-Mar (Satélites de Aplicaciones Basadas en la Información Ambiental del Mar).\n\nLas autoridades evaluaron la articulación técnica para integrar los datos y productos de observación satelital a los sistemas de control, monitoreo y vigilancia marítima de la Autoridad Marítima nacional.')">
           <div class="card-thumb">
-            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" alt="Guardacostas en navegación">
+            <img src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?auto=format&fit=crop&w=600&q=80" alt="Satélite y tecnología espacial">
           </div>
           <div class="card-body">
-            <span class="badge badge-prefectura">Prefectura</span>
-            <h4>Prefectura detecta presunta pesca ilegal en la milla 201</h4>
-            <p>Operativo de patrullaje preventivo de superficie y aeroespacial para la preservación de los recursos ictícolas.</p>
+            <span class="badge badge-prefectura">Vigilancia Espacial</span>
+            <h4>Prefectura e INVAP: avances del satélite SABIA-Mar</h4>
+            <p>Reunión técnica en Bariloche para coordinar la integración de datos satelitales a los sistemas de control de la fuerza.</p>
             <div class="card-meta">
-              <span>📅 20 Oct 2026</span>
-              <span>⏱️ 5 min</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Noticia 2: Industria Naval -->
-        <article class="news-card" onclick="abrirArticulo('Avanza la construcción del buque de investigación en Tandanor', 'En las gradas del astillero nacional avanza el montaje de los bloques estructurales de la nueva unidad científica. El buque contará con tecnología acústica de última generación para batimetría y relevamiento biológico en la plataforma continental argentina, con un 40% de avance en su obra de calderería.')">
-          <div class="card-thumb">
-            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80" alt="Grúas de astillero e industria naval">
-          </div>
-          <div class="card-body">
-            <span class="badge badge-industria">Industria Naval</span>
-            <h4>Avanza la construcción del buque de investigación en Tandanor</h4>
-            <p>La obra, destinada a tareas oceanográficas y apoyo logístico antártico, completa una nueva etapa de montaje.</p>
-            <div class="card-meta">
-              <span>📅 20 Oct 2026</span>
-              <span>⏱️ 5 min</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Noticia 3: Puertos -->
-        <article class="news-card" onclick="abrirArticulo('El Puerto de Buenos Aires registra aumento en el tráfico de contenedores', 'Durante el último balance trimestral se evidenció un incremento sostenido en las operaciones de transbordo y movimiento de TEUs en las terminales del puerto federal. Las obras de dragado en el canal de acceso permitieron optimizar las ventanas de marea para portacontenedores oceánicos de mayor manga.')">
-          <div class="card-thumb">
-            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Grúas pórtico y contenedores">
-          </div>
-          <div class="card-body">
-            <span class="badge badge-puertos">Puertos</span>
-            <h4>El Puerto de Buenos Aires registra aumento en el tráfico de contenedores</h4>
-            <p>Crecimiento en el movimiento de cargas y optimización de maniobras en los accesos a dársenas.</p>
-            <div class="card-meta">
-              <span>📅 20 Oct 2026</span>
-              <span>⏱️ 5 min</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Noticia 4: Navegación -->
-        <article class="news-card" onclick="abrirArticulo('Nueva cartografía y batimetría del Río de la Plata', 'El relevamiento hidrográfico del Río de la Plata exterior actualizó las profundidades determinantes y bancos de arena en proximidades de los canales de acceso. Las nuevas cartas náuticas electrónicas ya están disponibles para su incorporación en sistemas ECDIS a bordo de buques de ultramar.')">
-          <div class="card-thumb">
-            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80" alt="Buque en alta mar">
-          </div>
-          <div class="card-body">
-            <span class="badge badge-navegacion">Navegación</span>
-            <h4>Nueva cartografía y batimetría del Río de la Plata</h4>
-            <p>Actualización integral de sondajes en canales de acceso para mejorar la seguridad en la navegación.</p>
-            <div class="card-meta">
-              <span>📅 24 Oct 2026</span>
-              <span>⏱️ 5 min</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Noticia 5: Capacitación -->
-        <article class="news-card" onclick="abrirArticulo('Cursos de formación para la gente de mar', 'Se abren los llamados para las capacitaciones en convenios STCW, simuladores de navegación por radar ARPA y gestión de recursos del puente de navegación (BRM). Los programas están orientados a oficiales y patrones que buscan certificar competencias reglamentarias.')">
-          <div class="card-thumb">
-            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80" alt="Oficiales en puente de mando">
-          </div>
-          <div class="card-body">
-            <span class="badge badge-capacitacion">Capacitación</span>
-            <h4>Cursos de formación para la gente de mar</h4>
-            <p>Convocatoria a especializaciones en simulación de puente, maniobra avanzada y seguridad operativa.</p>
-            <div class="card-meta">
-              <span>📅 23 Oct 2026</span>
+              <span>📅 Octubre 2026</span>
               <span>⏱️ 3 min</span>
             </div>
           </div>
         </article>
 
-        <!-- Noticia 6: Ambiente -->
-        <article class="news-card" onclick="abrirArticulo('Regeneración y cuidado del ecosistema en el Delta', 'Especialistas y brigadistas costeros monitorean la recuperación de humedales en la cuenca del bajo Delta. Se refuerza el control sobre embarcaciones a motor respecto a velocidades máximas en arroyos y la gestión adecuada de aguas de sentina y residuos oleosos.')">
+        <!-- Noticia 2: Atlantic Dama / Vaca Muerta Oil Sur -->
+        <article class="news-card" onclick="abrirArticulo('Energía y Offshore', 'Vaca Muerta Oil Sur: el Atlantic Dama completó 68 días de operaciones continuas', 'En el marco del megaproyecto petrolero Vaca Muerta Oil Sur (VMOS), el buque especializado Atlantic Dama cumplió una destacada campaña de 68 días ininterrumpidos de operaciones costa afuera en la zona de Punta Colorada, provincia de Río Negro, sin ingresar a puerto.\n\nLa embarcación llevó adelante relevamientos geotécnicos y estudios de caracterización del lecho marino indispensables para el fondeo e ingeniería de detalle de las futuras monoboyas de exportación de crudo que conectarán el oleoducto con los buques tanque de ultramar.')">
           <div class="card-thumb">
-            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&q=80" alt="Atardecer en arroyo de delta">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" alt="Buque en operaciones de alta mar">
           </div>
           <div class="card-body">
-            <span class="badge badge-ambiente">Ambiente</span>
-            <h4>Regeneración y cuidado del ecosistema en el Delta</h4>
-            <p>Monitoreo continuo de flora ribereña y prevención de derrames en zonas de recreación náutica.</p>
+            <span class="badge badge-offshore">Offshore</span>
+            <h4>El buque «Atlantic Dama» completó 68 días continuos en Punta Colorada</h4>
+            <p>Campaña ininterrumpida de estudios de suelo marino para la instalación de las monoboyas de Vaca Muerta Oil Sur.</p>
             <div class="card-meta">
-              <span>📅 22 Oct 2026</span>
+              <span>📅 Octubre 2026</span>
+              <span>⏱️ 4 min</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Noticia 3: Puerto Ibicuy e YPF -->
+        <article class="news-card" onclick="abrirArticulo('Logística Fluvial', 'Muelle Isla en Puerto Ibicuy: nodo clave para las arenas de Vaca Muerta', 'Puerto Ibicuy, en la provincia de Entre Ríos, avanza en la reactivación y puesta a punto de su estratégico Muelle Isla para consolidarse como plataforma logística clave en el abastecimiento de arena de fractura para Vaca Muerta.\n\nEl esquema proyectado articula la logística fluvial a través de barcazas por el río Paraná Guazú y el trasbordo directo hacia formaciones ferroviarias de carga e YPF, reduciendo sensiblemente los costos de flete hacia la cuenca neuquina.')">
+          <div class="card-thumb">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Grúas portuarias e infraestructura">
+          </div>
+          <div class="card-body">
+            <span class="badge badge-logistica">Logística Fluvial</span>
+            <h4>Puerto Ibicuy: Muelle Isla y la logística de arenas para Vaca Muerta</h4>
+            <p>Esquema intermodal que articula barcazas fluviales y formaciones ferroviarias de carga hacia la cuenca neuquina.</p>
+            <div class="card-meta">
+              <span>📅 Octubre 2026</span>
+              <span>⏱️ 4 min</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Noticia 4: Velas Metálicas en Bahía Blanca -->
+        <article class="news-card" onclick="abrirArticulo('Innovación Naval', 'Un buque con velas metálicas rígidas volvió a cargar maíz en Bahía Blanca', 'En las instalaciones del Puerto de Bahía Blanca amarró y operó nuevamente un buque granelero equipado con velas metálicas rígidas de propulsión eólica asistida.\n\nEsta tecnología pionera en el transporte marítimo de ultramar aprovecha el viento aparente para asistir la propulsión principal de la nave, permitiendo reducciones en el consumo de combustible fósil y disminuyendo las emisiones de gases de efecto invernadero en las rutas oceánicas de granos.')">
+          <div class="card-thumb">
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80" alt="Buque granelero en navegación">
+          </div>
+          <div class="card-body">
+            <span class="badge badge-innovacion">Innovación Naval</span>
+            <h4>Velas metálicas rígidas: buque con propulsión eólica en Bahía Blanca</h4>
+            <p>La unidad granelera completó una nueva carga de maíz incorporando estructuras para ahorro de combustible en ultramar.</p>
+            <div class="card-meta">
+              <span>📅 Octubre 2026</span>
+              <span>⏱️ 3 min</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Noticia 5: Autos en Montevideo -->
+        <article class="news-card" onclick="abrirArticulo('Sistema Portuario', 'Saturación en el Puerto de Montevideo: destinan predio ferroviario para autos', 'El Puerto de Montevideo enfrenta un importante cuello de botella por saturación de espacio debido al fuerte incremento en el ingreso de automóviles importados, con una destacada presencia de unidades eléctricas de origen asiático.\n\nFrente al colapso de las explanadas portuarias tradicionales, la Administración Nacional de Puertos (ANP) de Uruguay debió recurrir a un predio ferroviario anexo para habilitar el acopio masivo de vehículos y evitar la afectación de los muelles comerciales.')">
+          <div class="card-thumb">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Terminal portuaria y explanadas">
+          </div>
+          <div class="card-body">
+            <span class="badge badge-puertos">Puertos Regionales</span>
+            <h4>Montevideo busca espacio: predio ferroviario para acopio de autos</h4>
+            <p>El aluvión de importación de vehículos eléctricos saturó las áreas estáticas de la terminal portuaria uruguaya.</p>
+            <div class="card-meta">
+              <span>📅 Octubre 2026</span>
+              <span>⏱️ 3 min</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Noticia 6: Ushuaia y Temporada Antártica -->
+        <article class="news-card" onclick="abrirArticulo('Infraestructura', 'El Puerto de Ushuaia renueva su sistema de defensas para cruceros', 'La Dirección Provincial de Puertos de Tierra del Fuego completó las obras de instalación y modernización de un nuevo sistema de defensas en los frentes de atraque del Puerto de Ushuaia.\n\nLos trabajos brindan mayor margen de seguridad hidrodinámica y estructural para las maniobras de amarre de buques de gran porte y cruceros de expedición antártica en el Canal Beagle.')">
+          <div class="card-thumb">
+            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80" alt="Instalaciones portuarias australes">
+          </div>
+          <div class="card-body">
+            <span class="badge badge-infra">Infraestructura Austral</span>
+            <h4>Ushuaia finalizó las obras de defensas de cara a la temporada de cruceros</h4>
+            <p>Modernización de escudos frontales y protecciones en los frentes de atraque para buques de gran porte.</p>
+            <div class="card-meta">
+              <span>📅 Octubre 2026</span>
               <span>⏱️ 3 min</span>
             </div>
           </div>
@@ -1136,57 +1023,55 @@
       </div>
     </main>
 
-    <!-- COLUMNA DERECHA: SIDEBAR EDITORIAL -->
+    <!-- BARRA LATERAL (SIDEBAR) -->
     <aside class="sidebar">
 
-      <!-- Widget YouTube -->
+      <!-- Widget YouTube Video Diario -->
       <section class="sidebar-widget">
-        <h4 class="widget-title">Último resumen en YouTube</h4>
+        <h4 class="widget-title">Despacho Diario en Video</h4>
         <div class="yt-thumb-box">
-          <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=400&q=80" alt="Miniatura YouTube">
+          <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=400&q=80" alt="Miniatura de video Bitácora Central">
           <div class="yt-play-icon">
             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           </div>
-          <span class="yt-duration">7:42</span>
+          <span class="yt-duration">2:30</span>
         </div>
         <div class="yt-desc">
-          <h5>Resumen semanal: Noticias navales y marítimas</h5>
-          <p>Repaso por los hechos más relevantes del sector naval, marítimo y fluvial en Argentina y el mundo.</p>
+          <h5>Panorama del día: buques, puertos y energía</h5>
+          <p>Resumen técnico con los principales acontecimientos navales, portuarios y marítimos de la jornada.</p>
           <a href="https://youtube.com/@bitacoracentral" target="_blank" class="btn-yt">Ver en YouTube →</a>
         </div>
       </section>
 
-      <!-- Widget Puertos -->
-      <section class="sidebar-widget" id="puertos">
-        <h4 class="widget-title">Actualidad portuaria</h4>
-        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=400&q=80" alt="Instalaciones portuarias" class="port-header-img">
-        <ul class="port-list">
-          <li><a href="#puertos">Puerto de Buenos Aires <span class="arrow">›</span></a></li>
-          <li><a href="#puertos">Puerto de Rosario <span class="arrow">›</span></a></li>
-          <li><a href="#puertos">Puerto de Bahía Blanca <span class="arrow">›</span></a></li>
-          <li><a href="#puertos">Puerto de Zárate <span class="arrow">›</span></a></li>
-          <li><a href="#puertos">Puerto de Mar del Plata <span class="arrow">›</span></a></li>
-        </ul>
-      </section>
-
-      <!-- Widget Normativa -->
+      <!-- Widget Notas y Normativa Complementaria -->
       <section class="sidebar-widget" id="normativa">
-        <h4 class="widget-title">Normativa y legislación</h4>
-        <div class="norma-box">
+        <h4 class="widget-title">Actualidad y Reglamentación</h4>
+        
+        <div class="norma-box" onclick="abrirArticulo('Seguridad Náutica', '130 años del Día del Práctico Argentino', 'Se conmemoran los 130 años de la reglamentación formal del Práctico Argentino, una función esencial para garantizar la seguridad de la navegación y la protección ambiental en los canales de acceso, el Río de la Plata y la Vía Navegable Troncal.')">
+          <div class="norma-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 10h2v4h-2zm0 6h2v2h-2z"/></svg>
+          </div>
+          <div class="norma-info">
+            <h5>130 años del Práctico Argentino</h5>
+            <p>Labor indispensable para la maniobra segura y el comercio exterior.</p>
+          </div>
+        </div>
+
+        <div class="norma-box" onclick="abrirArticulo('Energía y Sustentabilidad', 'Refinería San Lorenzo producirá combustible sostenible de aviación', 'Avanza el plan estratégico para transformar la histórica Refinería San Lorenzo, en Santa Fe, en un complejo de producción de combustible sostenible de aviación (SAF) de YPF a partir de materias primas biológicas.')">
           <div class="norma-icon">
             <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
           </div>
           <div class="norma-info">
-            <h5>Nueva resolución de Prefectura sobre seguridad fluvial</h5>
-            <span>Publicado: Octubre 2026</span>
+            <h5>Refinería San Lorenzo: combustible de aviación</h5>
+            <p>Proyecto sustentable sobre la ribera santafesina del río Paraná.</p>
           </div>
         </div>
-        <a href="#normativa" class="norma-link">Ver más en normativa →</a>
+
       </section>
 
       <!-- Widget Redes Sociales -->
       <section class="sidebar-widget">
-        <h4 class="widget-title">Seguinos en redes</h4>
+        <h4 class="widget-title">Canales Oficiales</h4>
         <div class="social-list">
           
           <a href="https://youtube.com/@bitacoracentral" target="_blank" class="social-item">
@@ -1195,7 +1080,7 @@
             </div>
             <div class="social-label">
               <h6>YouTube</h6>
-              <span>@Bitacoracentral</span>
+              <span>@bitacoracentral</span>
             </div>
           </a>
 
@@ -1245,72 +1130,10 @@
     </aside>
   </div>
 
-  <!-- =========================================
-       PIE DE PÁGINA
-       ========================================= -->
+  <!-- PIE DE PÁGINA Y ADVERTENCIA FORMAL -->
   <footer>
     <div class="footer-top">
-      <div class="footer-brand">
-        <!-- Isotipo Blanco / Dorado -->
-        <svg style="width: 42px; height: 42px; flex-shrink: 0;" viewBox="0 0 100 100" fill="none">
-          <circle cx="50" cy="50" r="48" fill="#0c1e33" stroke="#c6a664" stroke-width="2"/>
-          <path d="M20 65C35 60 45 72 60 65C72 60 80 66 82 68" stroke="#38bdf8" stroke-width="4"/>
-          <path d="M30 54L38 38H62L70 54Z" fill="#ffffff"/>
-        </svg>
-        <div class="footer-brand-text">
-          <h4>BITÁCORA CENTRAL</h4>
-          <p>Una mirada profesional sobre la actualidad naval, marítima y fluvial de Argentina y la región.</p>
-        </div>
-      </div>
-
-      <div class="newsletter-box">
-        <h5>Suscribite a nuestro boletín</h5>
-        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte al boletín de Bitácora Central!');">
-          <input type="email" placeholder="Tu correo electrónico" required>
-          <button type="submit">Enviar</button>
-        </form>
-        <span>Recibí las noticias y despachos más importantes en tu correo.</span>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2026 Bitácora Central. Todos los derechos reservados.</p>
-      <div class="footer-links">
-        <a href="#inicio">Términos y condiciones</a>
-        <a href="#inicio">Política de privacidad</a>
-        <a href="mailto:redaccion@bitacoracentral.com.ar">Contacto</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- MODAL DE LECTURA (POPUP) -->
-  <div class="modal" id="modalArticulo">
-    <div class="modal-box">
-      <button class="modal-close" onclick="cerrarArticulo()">×</button>
-      <h3 id="modalTitulo" style="color:#fff; font-size:1.4rem; margin-bottom:1rem; line-height:1.3;"></h3>
-      <div id="modalCuerpo" style="color:#cbd5e1; font-size:0.95rem; line-height:1.6;"></div>
-    </div>
-  </div>
-
-  <script>
-    // Función para abrir lector modal
-    function abrirArticulo(titulo, texto) {
-      document.getElementById('modalTitulo').innerText = titulo;
-      document.getElementById('modalCuerpo').innerText = texto;
-      document.getElementById('modalArticulo').classList.add('active');
-    }
-
-    function cerrarArticulo() {
-      document.getElementById('modalArticulo').classList.remove('active');
-    }
-
-    // Cerrar al hacer clic fuera del recuadro
-    window.onclick = function(event) {
-      const modal = document.getElementById('modalArticulo');
-      if (event.target === modal) {
-        cerrarArticulo();
-      }
-    };
-  </script>
-</body>
-</html>
+      <div>
+        <div class="footer-brand">
+          <svg style="width: 40px; height: 40px; flex-shrink: 0;" viewBox="0 0 100 100" fill="none">
+            <circle cx
