@@ -1,31 +1,38 @@
 ---
 layout: post
-title: "Vigilancia marítima y soberanía: Prefectura e INVAP coordinan la integración de datos del satélite SABIA-Mar"
+title: "Vigilancia de espacios jurisdiccionales: Prefectura e INVAP avanzan en la integración operativa del satélite SABIA-Mar"
 category: "Tecnología y Control"
 image: "/sabia-mar-prefectura.jpg"
 lectura: "4 min"
 ---
 
-Autoridades técnicas de la Prefectura Naval Argentina realizaron una visita de trabajo a las instalaciones de la empresa tecnológica INVAP S.A.U. en San Carlos de Bariloche, con el objetivo de evaluar los ensayos finales del satélite argentino **SABIA-Mar**, cuyo lanzamiento al espacio está programado para el primer semestre de 2027.
+Una delegación de la Prefectura Naval Argentina realizó una inspección técnica a las instalaciones de INVAP S.A.U. en San Carlos de Bariloche, con el propósito de evaluar el estado de avance en la fase final de integración y ensayos del satélite argentino **SABIA-Mar**, cuya puesta en órbita está planificada para el primer semestre de 2027.
 
-El encuentro no se limitó a una visita institucional, sino que responde a la necesidad de articular la infraestructura tecnológica nacional con el control real de las aguas de jurisdicción argentina. Como usuario estratégico del proyecto, la Autoridad Marítima nacional intervino activamente en la definición de los requerimientos técnicos de la misión para garantizar que los datos recolectados desde el espacio se traduzcan en herramientas operativas concretas para la seguridad de la navegación, la vigilancia de los espacios marítimos y fluviales, y la preservación ambiental.
+La comisión técnica de la Autoridad Marítima estuvo encabezada por el Director de Informática y Comunicaciones, acompañado por los titulares del Departamento Comunicaciones, la Prefectura San Carlos de Bariloche y la División Sistemas de Información Geográfica.
 
-## ¿Qué es el SABIA-Mar y cuál es su aporte al control marítimo?
+## El origen del proyecto: la Autoridad Marítima como usuario estratégico
 
-El satélite SABIA-Mar (Satélite de Aplicaciones Basadas en la Información Ambiental del Mar) es un proyecto de observación de la Tierra impulsado por la Comisión Nacional de Actividades Espaciales (CONAE), con INVAP como contratista principal para su desarrollo y construcción.
+El SABIA-Mar (Satélite de Aplicaciones Basadas en la Información Ambiental del Mar) constituye una misión concebida por la Comisión Nacional de Actividades Espaciales (CONAE), con INVAP como contratista principal para su ingeniería, fabricación e integración.
 
-A diferencia de los satélites de comunicaciones tradicionales, esta plataforma orbital está específicamente concebida para monitorear el mar, las costas y los ecosistemas acuáticos mediante sensores ópticos de alta sensibilidad. Para la Autoridad Marítima, disponer de esta fuente de información orbital soberana resulta fundamental: permite obtener datos periódicos de la plataforma continental y los cursos fluviales, complementando el patrullaje de los guardacostas y aeronaves de exploración.
+La participación de la Prefectura Naval Argentina responde a su rol dentro de la comunidad de **usuarios estratégicos** del sistema satelital. La Institución intervino desde las fases preliminares en la formulación de requerimientos técnicos operativos. El propósito es garantizar que la información obtenida desde la órbita no sea exclusivamente de valor científico, sino que alimente en tiempo real las tareas de control de los espacios marítimos y fluviales de jurisdicción nacional.
 
-## Pruebas orbitales extremas en CEATSA
+## ¿Para qué se utilizará la información orbital?
 
-Durante la recorrida, la comitiva —integrada por especialistas de las áreas de Informática, Comunicaciones y Sistemas de Información Geográfica de la Fuerza— recorrió los laboratorios y el Centro de Ensayos de Alta Tecnología (CEATSA).
+Los datos provistos por los sensores ópticos y radiométricos del satélite permitirán fortalecer tres ejes centrales de la operatividad costera y de ultramar:
 
-En este complejo se supervisaron las pruebas a las que se somete la estructura del satélite antes de volar:
-* **Cámaras de termovacío:** Espacios donde se simulan las drásticas variaciones de temperatura y el vacío absoluto del entorno espacial para certificar que el instrumental funcione sin fallas en órbita.
-* **Ensayos mecánicos, acústicos y de vibración:** Simulaciones dinámicas de la violencia mecánica a la que estará expuesta la nave durante la fase de lanzamiento e inserción orbital.
+* **Vigilancia y monitoreo marítimo:** Complementación del despliegue de unidades de superficie (guardacostas) y aeronaves de exploración para el seguimiento del tráfico por agua en la Zona Económica Exclusiva (ZEE) y la Vía Navegable Troncal.
+* **Seguridad de la navegación y operaciones SAR:** Detección de patrones oceanográficos e hidrodinámicos críticos que inciden en el salvaguardo de la vida humana en las aguas.
+* **Protección del medio ambiente marino:** Detección temprana de hidrocarburos en superficie, seguimiento de derrames y monitoreo de floraciones algales nocivas que afectan el ecosistema acuático.
 
-## Integración con radares y sistemas de comando
+## Ensayos ambientales en CEATSA: validación previa al lanzamiento
 
-La agenda técnica incluyó además una inspección a los talleres de desarrollo y fabricación de radares de INVAP. Las autoridades analizaron las capacidades de producción de sistemas de radar primarios, secundarios y tácticos, tecnologías directamente aplicables a la modernización de los esquemas de vigilancia costera, monitoreo de canales de acceso y control del tráfico por agua.
+Durante la recorrida, las autoridades técnicas inspeccionaron los laboratorios del Centro de Ensayos de Alta Tecnología (CEATSA), donde la plataforma satelital atraviesa pruebas destinadas a certificar su supervivencia operativa en el espacio exterior:
 
-El objetivo final de esta vinculación tecnológica es alimentar de forma directa los sistemas de comando, control y monitoreo geográfico de la Prefectura. Al cruzar las trazas de posicionamiento de buques con imágenes satelitales y coberturas de radar en tiempo real, la Fuerza optimiza su capacidad de respuesta operativa y toma de decisiones frente a incidentes de seguridad náutica, emergencias de búsqueda y rescate (SAR) o infracciones en el Mar Argentino.
+* **Cámaras de termovacío:** Simulación de los gradientes térmicos extremos y las condiciones de vacío absoluto a las que estará expuesta la plataforma durante su ciclo orbital.
+* **Ensayos dinámicos (vibración y acústica):** Ensayos mecánicos para validar la resistencia de los componentes estructurales y la carga útil electrónica frente a las cargas dinámicas generadas por el vector de lanzamiento.
+
+## Radarización costera e integración con el sistema de comando y control
+
+La agenda técnica abarcó también los talleres de desarrollo y fabricación de sensores radar de INVAP. Se analizaron las capacidades de producción de radares primarios, secundarios y tácticos, tecnologías indispensables para la modernización de los sistemas de vigilancia de costas y control de tráfico por agua (VTS).
+
+El objetivo central de este enlace tecnológico es incorporar el flujo de telemetría e imágenes del SABIA-Mar directamente a la arquitectura del **Sistema Guardacostas (SIG)** y las bases de datos de información geográfica de la Institución[cite: 8]. Al superponer las trazas satelitales con los datos de posición AIS y las coberturas de radar costero, la Autoridad Marítima optimiza sus capacidades de toma de decisiones frente a ilícitos en el mar y siniestros náuticos[cite: 8].
