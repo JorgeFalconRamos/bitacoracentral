@@ -2,7 +2,7 @@
 layout: post
 title: "Emergencia en el Atlántico Sur: fuego activo y abandono del portacontenedores «Espirito Santo Express»"
 category: "Seguridad Marítima"
-image: "https://www.globalports.com.ar/wp-content/uploads/2026/10/Espiritu-santo2-1280x640.jpeg"
+image: "/Espiritu-santo2-1280x640.jpeg"
 lectura: "5 min"
 ---
 
