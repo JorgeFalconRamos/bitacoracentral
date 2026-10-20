@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Emergencia en el Atlántico Sur: fuego activo y abandono del portacontenedores «Espirito Santo Express»"
+title: "Emergencia en el Atlántico Sur: fuego activo y abandono del portacontenedores "Espirito Santo Express"
 category: "Seguridad Marítima"
 image: "/Espiritu-santo2-1280x640.jpeg"
 lectura: "5 min"
